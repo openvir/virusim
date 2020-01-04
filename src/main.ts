@@ -1,6 +1,5 @@
-function main(person) {
-    return "Hello, " + person;
-}
+import {Cell} from './Cell';
 
+const cell = new Cell();
 
-console.log(main('dominik'));
+console.log(cell);
