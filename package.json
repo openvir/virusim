@@ -1,0 +1,14 @@
+{
+  "name": "cell",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "https://github.com/dgrusemann/cell.git",
+  "author": "dgrusemann <dominik.grusemann@gmail.com>",
+  "scripts": {
+    "start": "ts-node src/main.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.4"
+  }
+}
