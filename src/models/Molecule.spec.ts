@@ -7,4 +7,10 @@ describe('Molecule', () => {
             expect(molecule).not.toBe(null);
         });
     });
+    describe('elementCount', () => {
+        it('returns the number of elements in the molecule', () => {
+            const molecule = new Molecule("H2O");
+            expect(molecule.elementCount('H')).toEqual(2);
+        });
+    });
 });
