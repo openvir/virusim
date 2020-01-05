@@ -11,6 +11,7 @@ describe('Molecule', () => {
         it('returns the number of elements in the molecule', () => {
             const molecule = new Molecule("H2O");
             expect(molecule.elementCount('H')).toEqual(2);
+            expect(molecule.elementCount('O')).toEqual(1);
         });
     });
 });
