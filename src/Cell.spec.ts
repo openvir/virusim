@@ -4,7 +4,7 @@ describe('Cell', () => {
     describe('glycolysis', () => {
         it('returns', () => {
             const cell = new Cell();
-            expect(cell.glycolysis(['glucose'])).toEqual(['lactate', 'pyruvate', 'ethanol']);
+            expect(cell.glycolysis(['glucose'])).toEqual(['pyruvate']);
         });
     });
 });
