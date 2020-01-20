@@ -1,6 +1,6 @@
 export class Molecule {
     name: string
-    elements: Record<string, any>
+    elements: Record<string, number>
 
     constructor(name: string) {
         this.name = name
