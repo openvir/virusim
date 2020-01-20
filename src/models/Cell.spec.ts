@@ -1,5 +1,5 @@
-import {Cell} from "./Cell";
-import {Molecule} from "./Molecule";
+import { Cell } from './Cell';
+import { Molecule } from './Molecule';
 
 describe('Cell', () => {
     describe('glycolysis', () => {
