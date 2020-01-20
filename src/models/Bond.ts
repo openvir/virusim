@@ -15,13 +15,15 @@ export class Bond {
 
     }
 
-    polarity(): string {
+    electronegativity(): number {
         let element1 = Object.keys(this.elements)[0]
         let element2 = Object.keys(this.elements)[1]
 
-        const electroNegativity = Math.abs(ELEMENTS[element1].electronegativity_pauling - ELEMENTS[element2].electronegativity_pauling)
+        return Math.abs(ELEMENTS[element1].electronegativity_pauling - ELEMENTS[element2].electronegativity_pauling)
+    }
 
-        if (electroNegativity > 0.5) {
+    polarity(): string {
+        if (this.electronegativity() > 0.5) {
             return 'polar'
         } else {
             return 'non-polar'
