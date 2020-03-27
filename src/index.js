@@ -3,7 +3,6 @@ let BABYLON = require('babylonjs');
 var canvas = document.getElementById('renderCanvas') // Get the canvas element
 var engine = new BABYLON.Engine(canvas, true) // Generate the BABYLON 3D engine
 
-/******* Add the create scene function ******/
 var createScene = function() {
 
     // Create the scene space
@@ -22,7 +21,6 @@ var createScene = function() {
 
     return scene
 }
-/******* End of the create scene function ******/
 
 var scene = createScene() //Call the createScene function
 
