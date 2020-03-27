@@ -1,23 +1,18 @@
-let BABYLON = require('babylonjs')
+const BABYLON = require('babylonjs')
 
-var canvas = document.getElementById('renderCanvas') // Get the canvas element
-var engine = new BABYLON.Engine(canvas, true) // Generate the BABYLON 3D engine
+const canvas = document.getElementById('renderCanvas') // Get the canvas element
+const engine = new BABYLON.Engine(canvas, true) // Generate the BABYLON 3D engine
 
 export const createScene = function(cells) {
-    var scene = new BABYLON.Scene(engine)
+    const scene = new BABYLON.Scene(engine)
     scene.clearColor = new BABYLON.Color3(.5, .5, .5)
-    // camera
-    var camera = new BABYLON.ArcRotateCamera('camera1', 0, 0, 0, new BABYLON.Vector3(0, 0, 0), scene)
+
+    const camera = new BABYLON.ArcRotateCamera('camera1', 0, 0, 0, new BABYLON.Vector3(0, 0, 0), scene)
     camera.setPosition(new BABYLON.Vector3(0, 0, -50))
     camera.attachControl(canvas, true)
-    // light
-    var light = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(1, 0, 0), scene)
+
+    const light = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(1, 0, 0), scene)
     light.intensity = 0.7
-    var mat = new BABYLON.StandardMaterial('mat1', scene)
-    mat.alpha = 1.0
-    mat.diffuseColor = new BABYLON.Color3(0.5, 0.5, 1.0)
-    //mat.wireframe = true;
-    mat.backFaceCulling = false
 
     for (const cell of cells) {
         var tes = 60
@@ -31,15 +26,8 @@ export const createScene = function(cells) {
             path.push(new BABYLON.Vector3(x, y, z))
         }
         path.push(path[0])
-        var circle = BABYLON.Mesh.CreateLines('circle', path, scene)
+        const circle = BABYLON.Mesh.CreateLines('circle', path, scene)
     }
-
-
-
-
-    // var sphere = BABYLON.Mesh.CreateRibbon("sph", paths, false, false, 0, scene);
-    // sphere.material = mat;
-
 
     return scene
 }
