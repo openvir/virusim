@@ -1,16 +1,3 @@
-import _ from 'lodash'
-
-function component() {
-    const element = document.createElement('div')
-
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'webpack3'], ' ')
-
-    return element
-}
-
-document.body.appendChild(component())
-
 let BABYLON = require('babylonjs');
 
 var canvas = document.getElementById('renderCanvas') // Get the canvas element
