@@ -5,6 +5,7 @@
   "repository": "https://github.com/dgrusemann/cell.git",
   "author": "dgrusemann <dominik.grusemann@gmail.com>",
   "scripts": {
+    "build": "webpack",
     "start": "ts-node src/main.ts",
     "test": "jest",
     "lint": "eslint src/**/*.ts"
@@ -20,6 +21,11 @@
     "prettier": "^1.19.1",
     "ts-jest": "^24.2.0",
     "ts-node": "^8.5.4",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.4",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
   }
 }
