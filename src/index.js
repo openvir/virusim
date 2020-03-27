@@ -5,12 +5,14 @@ var engine = new BABYLON.Engine(canvas, true) // Generate the BABYLON 3D engine
 
 const cell1 = {
     x: 0,
-    y: 0
+    y: 0,
+    radius: 10,
 }
 
 const cell2 = {
     x: 10,
-    y: 10
+    y: 10,
+    radius: 10,
 }
 
 var scene = createScene([cell1, cell2]) //Call the createScene function

@@ -20,15 +20,14 @@ export const createScene = function(cells) {
     mat.backFaceCulling = false
 
     for (const cell of cells) {
-        var radius = 10
         var tes = 60
         var pi2 = Math.PI * 2
         var step = pi2 / tes
         var path = []
         for (var i = 0; i < pi2; i += step) {
-            var x = cell.x + radius * Math.sin(i)
+            var x = cell.x + cell.radius * Math.sin(i)
             var z = 0
-            var y = cell.y + radius * Math.cos(i)
+            var y = cell.y + cell.radius * Math.cos(i)
             path.push(new BABYLON.Vector3(x, y, z))
         }
         path.push(path[0])
