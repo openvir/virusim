@@ -3,7 +3,7 @@ let BABYLON = require('babylonjs')
 var canvas = document.getElementById('renderCanvas') // Get the canvas element
 var engine = new BABYLON.Engine(canvas, true) // Generate the BABYLON 3D engine
 
-export const createScene = function() {
+export const createScene = function(cells) {
     var scene = new BABYLON.Scene(engine)
     scene.clearColor = new BABYLON.Color3(.5, .5, .5)
     // camera
@@ -19,20 +19,23 @@ export const createScene = function() {
     //mat.wireframe = true;
     mat.backFaceCulling = false
 
-    var radius = 10
-    var tes = 60
-    var pi2 = Math.PI * 2
-    var step = pi2 / tes
-    var path = []
-    for (var i = 0; i < pi2; i += step) {
-        var x = radius * Math.sin(i)
-        var z = 0
-        var y = radius * Math.cos(i)
-        path.push(new BABYLON.Vector3(x, y, z))
+    for (const cell of cells) {
+        var radius = 10
+        var tes = 60
+        var pi2 = Math.PI * 2
+        var step = pi2 / tes
+        var path = []
+        for (var i = 0; i < pi2; i += step) {
+            var x = cell.x + radius * Math.sin(i)
+            var z = 0
+            var y = cell.y + radius * Math.cos(i)
+            path.push(new BABYLON.Vector3(x, y, z))
+        }
+        path.push(path[0])
+        var circle = BABYLON.Mesh.CreateLines('circle', path, scene)
     }
-    path.push(path[0])
 
-    var circle = BABYLON.Mesh.CreateLines('circle', path, scene)
+
 
 
     // var sphere = BABYLON.Mesh.CreateRibbon("sph", paths, false, false, 0, scene);
