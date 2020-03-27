@@ -4,20 +4,40 @@ var canvas = document.getElementById('renderCanvas') // Get the canvas element
 var engine = new BABYLON.Engine(canvas, true) // Generate the BABYLON 3D engine
 
 export const createScene = function() {
-
-    // Create the scene space
     var scene = new BABYLON.Scene(engine)
-
-    // Add a camera to the scene and attach it to the canvas
-    var camera = new BABYLON.ArcRotateCamera('Camera', Math.PI / 2, Math.PI / 2, 2, new BABYLON.Vector3(0, 0, 5), scene)
+    scene.clearColor = new BABYLON.Color3(.5, .5, .5)
+    // camera
+    var camera = new BABYLON.ArcRotateCamera('camera1', 0, 0, 0, new BABYLON.Vector3(0, 0, 0), scene)
+    camera.setPosition(new BABYLON.Vector3(0, 0, -50))
     camera.attachControl(canvas, true)
+    // light
+    var light = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(1, 0, 0), scene)
+    light.intensity = 0.7
+    var mat = new BABYLON.StandardMaterial('mat1', scene)
+    mat.alpha = 1.0
+    mat.diffuseColor = new BABYLON.Color3(0.5, 0.5, 1.0)
+    //mat.wireframe = true;
+    mat.backFaceCulling = false
 
-    // Add lights to the scene
-    var light1 = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(1, 1, 0), scene)
-    var light2 = new BABYLON.PointLight('light2', new BABYLON.Vector3(0, 1, -1), scene)
+    var radius = 10
+    var tes = 60
+    var pi2 = Math.PI * 2
+    var step = pi2 / tes
+    var path = []
+    for (var i = 0; i < pi2; i += step) {
+        var x = radius * Math.sin(i)
+        var z = 0
+        var y = radius * Math.cos(i)
+        path.push(new BABYLON.Vector3(x, y, z))
+    }
+    path.push(path[0])
 
-    // Add and manipulate meshes in the scene
-    var sphere = BABYLON.MeshBuilder.CreateSphere('sphere', { diameter: 2 }, scene)
+    var circle = BABYLON.Mesh.CreateLines('circle', path, scene)
+
+
+    // var sphere = BABYLON.Mesh.CreateRibbon("sph", paths, false, false, 0, scene);
+    // sphere.material = mat;
+
 
     return scene
 }
