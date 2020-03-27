@@ -6,16 +6,16 @@ var engine = new BABYLON.Engine(canvas, true) // Generate the BABYLON 3D engine
 const cell1 = {
     x: 0,
     y: 0,
-    radius: 10,
+    radius: 10, // 100 μm = 100000 nm
 }
 
-const cell2 = {
+const virus = {
     x: 10,
     y: 10,
-    radius: 10,
+    radius: 1, // 120 nm
 }
 
-var scene = createScene([cell1, cell2]) //Call the createScene function
+var scene = createScene([cell1, virus]) //Call the createScene function
 
 // Register a render loop to repeatedly render the scene
 engine.runRenderLoop(function() {
