@@ -15,14 +15,14 @@ export const createScene = function(cells) {
     light.intensity = 0.7
 
     for (const cell of cells) {
-        var tes = 60
-        var pi2 = Math.PI * 2
-        var step = pi2 / tes
-        var path = []
-        for (var i = 0; i < pi2; i += step) {
-            var x = cell.x + cell.radius * Math.sin(i)
-            var z = 0
-            var y = cell.y + cell.radius * Math.cos(i)
+        const tes = 60
+        const pi2 = Math.PI * 2
+        const step = pi2 / tes
+        const path = []
+        for (let i = 0; i < pi2; i += step) {
+            const x = cell.x + cell.radius * Math.sin(i)
+            const z = 0
+            const y = cell.y + cell.radius * Math.cos(i)
             path.push(new BABYLON.Vector3(x, y, z))
         }
         path.push(path[0])
