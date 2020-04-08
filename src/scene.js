@@ -35,5 +35,40 @@ export const createScene = function(cells) {
     const path2 = createPath(cells[1])
     const circle2 = BABYLON.Mesh.CreateLines('circle', path2, scene)
 
+    //Create a scaling animation at 30 FPS
+    var animationBox = new BABYLON.Animation("tutoAnimation", "position.x", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT,
+        BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+    // Animation keys
+    var keys = [];
+    //At the animation key 0, the value of scaling is "1"
+    keys.push({
+        frame: 0,
+        value: 1
+    });
+
+    //At the animation key 20, the value of scaling is "0.2"
+    keys.push({
+        frame: 20,
+        value: 10
+    });
+
+    //At the animation key 100, the value of scaling is "1"
+    keys.push({
+        frame: 100,
+        value: 1
+    });
+
+    animationBox.setKeys(keys);
+
+    circle2.animations.push(animationBox);
+
+    setTimeout(async () => {
+        var anim = scene.beginAnimation(circle2, 0, 100, false);
+
+        console.log("before");
+        await anim.waitAsync();
+        console.log("after");
+    });
+
     return scene
 }
