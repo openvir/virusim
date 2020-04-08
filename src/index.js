@@ -1,13 +1,14 @@
 import { createScene } from './scene'
+import { Cell } from './models/Cell'
 
 var canvas = document.getElementById('renderCanvas') // Get the canvas element
 var engine = new BABYLON.Engine(canvas, true) // Generate the BABYLON 3D engine
 
-const cell1 = {
+const cell1 = new Cell({
     x: 0,
     y: 0,
     radius: 10, // 100 μm = 100000 nm
-}
+})
 
 const virus = {
     x: 10,
