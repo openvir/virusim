@@ -29,10 +29,11 @@ export const createScene = function(cells) {
     const light = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(1, 0, 0), scene)
     light.intensity = 0.7
 
-    for (const cell of cells) {
-        const path = createPath(cell)
-        const circle = BABYLON.Mesh.CreateLines('circle', path, scene)
-    }
+    const path1 = createPath(cells[0])
+    const circle1 = BABYLON.Mesh.CreateLines('circle', path1, scene)
+
+    const path2 = createPath(cells[1])
+    const circle2 = BABYLON.Mesh.CreateLines('circle', path2, scene)
 
     return scene
 }
