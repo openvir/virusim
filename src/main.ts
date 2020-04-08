@@ -2,6 +2,6 @@ import {Cell} from './models/Cell';
 
 const cell = new Cell();
 
-cell.glycolysis(['glukose']);
+// cell.glycolysis(['glukose']);
 
 console.log(cell);
