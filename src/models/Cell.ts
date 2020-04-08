@@ -1,4 +1,5 @@
 import { Molecule } from './Molecule'
+import { Virus } from './Virus'
 
 export class Cell {
     x: number
@@ -15,5 +16,9 @@ export class Cell {
         }
 
         return []
+    }
+
+    virusCellMembraneFusionPossible(_virus: Virus): boolean {
+        return true
     }
 }
