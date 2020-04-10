@@ -1,4 +1,4 @@
-import { createScene } from './scene'
+import { createScene } from './view/scene'
 import { Cell } from './models/Cell'
 import { Virus } from './models/Virus'
 
