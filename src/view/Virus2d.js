@@ -25,5 +25,7 @@ function createEnvelope(virus) {
 
 export function createVirusMesh(virus, scene) {
     const lines = [createEnvelope(virus), createGenes(virus)]
-    return BABYLON.MeshBuilder.CreateLineSystem('circle', { lines: lines }, scene)
+    const mesh = BABYLON.MeshBuilder.CreateLineSystem('circle', { lines: lines }, scene)
+    mesh.color = BABYLON.Color3.Red()
+    return mesh
 }
