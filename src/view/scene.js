@@ -1,22 +1,9 @@
+import { createPath } from './Cell'
+
 const BABYLON = require('babylonjs')
 
 const canvas = document.getElementById('renderCanvas') // Get the canvas element
 const engine = new BABYLON.Engine(canvas, true) // Generate the BABYLON 3D engine
-
-function createPath(cell) {
-    const tes = 60
-    const pi2 = Math.PI * 2
-    const step = pi2 / tes
-    const path = []
-    for (let i = 0; i < pi2; i += step) {
-        const x = cell.x + cell.radius * Math.sin(i)
-        const z = 0
-        const y = cell.y + cell.radius * Math.cos(i)
-        path.push(new BABYLON.Vector3(x, y, z))
-    }
-    path.push(path[0])
-    return path
-}
 
 export const createScene = function(cells) {
     const scene = new BABYLON.Scene(engine)
