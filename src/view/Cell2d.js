@@ -1,6 +1,6 @@
 const BABYLON = require('babylonjs')
 
-export function createPath(cell) {
+export function createCellPath(cell) {
     const tes = 60
     const pi2 = Math.PI * 2
     const step = pi2 / tes

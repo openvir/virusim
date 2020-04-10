@@ -1,4 +1,4 @@
-import { createPath } from './Cell2d'
+import { createCellPath } from './Cell2d'
 import { Cell, Virus } from '../models'
 
 const BABYLON = require('babylonjs')
@@ -21,9 +21,9 @@ export const createScene = function(cells) {
         let object2d
 
         if (cell instanceof Cell) {
-            object2d = BABYLON.Mesh.CreateLines('circle', createPath(cell), scene)
+            object2d = BABYLON.Mesh.CreateLines('circle', createCellPath(cell), scene)
         } else if (cell instanceof Virus) {
-            object2d = BABYLON.Mesh.CreateLines('circle', createPath(cell), scene)
+            object2d = BABYLON.Mesh.CreateLines('circle', createCellPath(cell), scene)
         }
 
         if (cell.moving) {
