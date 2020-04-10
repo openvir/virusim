@@ -2,6 +2,13 @@ const BABYLON = require('babylonjs')
 
 const PI2 = Math.PI * 2
 
+function createGenes(virus) {
+    return [
+        new BABYLON.Vector3(virus.x - (virus.radius / 2), virus.y, 0),
+        new BABYLON.Vector3(virus.x + (virus.radius / 2), virus.y, 0),
+    ]
+}
+
 function createEnvelope(virus) {
     const tes = 60
     const step = PI2 / tes
@@ -17,5 +24,5 @@ function createEnvelope(virus) {
 }
 
 export function createVirusPath(virus) {
-    return [createEnvelope(virus)]
+    return [createEnvelope(virus), createGenes(virus)]
 }
