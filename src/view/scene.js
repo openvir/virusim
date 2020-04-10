@@ -1,4 +1,5 @@
 import { createPath } from './Cell2d'
+import { Cell, Virus } from '../models'
 
 const BABYLON = require('babylonjs')
 
@@ -17,7 +18,13 @@ export const createScene = function(cells) {
     light.intensity = 0.7
 
     for (const cell of cells) {
-        const object2d = BABYLON.Mesh.CreateLines('circle', createPath(cell), scene)
+        let object2d
+
+        if (cell instanceof Cell) {
+            object2d = BABYLON.Mesh.CreateLines('circle', createPath(cell), scene)
+        } else if (cell instanceof Virus) {
+            object2d = BABYLON.Mesh.CreateLines('circle', createPath(cell), scene)
+        }
 
         if (cell.moving) {
             const animationBox = new BABYLON.Animation('tutoAnimation', 'position.x', 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT,
