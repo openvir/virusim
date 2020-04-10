@@ -12,5 +12,5 @@ export function createCellPath(cell) {
         path.push(new BABYLON.Vector3(x, y, z))
     }
     path.push(path[0])
-    return path
+    return [path]
 }

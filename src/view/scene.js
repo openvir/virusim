@@ -23,9 +23,9 @@ export const createScene = function(cells) {
         let object2d
 
         if (cell instanceof Cell) {
-            object2d = BABYLON.Mesh.CreateLines('circle', createCellPath(cell), scene)
+            object2d = BABYLON.MeshBuilder.CreateLineSystem('circle', { lines: createCellPath(cell) }, scene)
         } else if (cell instanceof Virus) {
-            object2d = BABYLON.Mesh.CreateLines('circle', createVirusPath(cell), scene)
+            object2d = BABYLON.MeshBuilder.CreateLineSystem('circle', { lines: createVirusPath(cell) }, scene)
         }
 
         if (cell.moving) {
