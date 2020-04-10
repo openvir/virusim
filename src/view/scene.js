@@ -17,23 +17,22 @@ export const createScene = function(cells) {
     light.intensity = 0.7
 
     for (const cell of cells) {
-        const path = createPath(cell)
-        const circle2 = BABYLON.Mesh.CreateLines('circle', path, scene)
+        const object2d = BABYLON.Mesh.CreateLines('circle', createPath(cell), scene)
 
         if (cell.moving) {
-            var animationBox = new BABYLON.Animation('tutoAnimation', 'position.x', 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT,
+            const animationBox = new BABYLON.Animation('tutoAnimation', 'position.x', 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT,
                 BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE)
             // Animation keys
-            var keys = []
+            const keys = []
             keys.push({ frame: 0, value: 1 })
             keys.push({ frame: 100, value: -5 })
 
             animationBox.setKeys(keys)
 
-            circle2.animations.push(animationBox)
+            object2d.animations.push(animationBox)
 
             setTimeout(async () => {
-                var anim = scene.beginAnimation(circle2, 0, 100, false)
+                const anim = scene.beginAnimation(object2d, 0, 100, false)
                 await anim.waitAsync()
             })
         }
