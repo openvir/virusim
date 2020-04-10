@@ -23,6 +23,7 @@ function createEnvelope(virus) {
     return path
 }
 
-export function createVirusPath(virus) {
-    return [createEnvelope(virus), createGenes(virus)]
+export function createVirusMesh(virus, scene) {
+    const lines = [createEnvelope(virus), createGenes(virus)]
+    return BABYLON.MeshBuilder.CreateLineSystem('circle', { lines: lines }, scene)
 }
