@@ -15,6 +15,7 @@ const virus = new Virus({
     x: 10,
     y: 10,
     radius: 1, // 120 nm
+    moving: true
 })
 
 var scene = createScene([cell1, virus]) //Call the createScene function
