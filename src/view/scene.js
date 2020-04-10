@@ -1,4 +1,4 @@
-import { createPath } from './Cell'
+import { createPath } from './Cell2d'
 
 const BABYLON = require('babylonjs')
 
