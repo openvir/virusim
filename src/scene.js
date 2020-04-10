@@ -49,10 +49,7 @@ export const createScene = function(cells) {
 
     setTimeout(async () => {
         var anim = scene.beginAnimation(circle2, 0, 100, false)
-
-        console.log('before')
         await anim.waitAsync()
-        console.log('after')
     })
 
     return scene
