@@ -1,22 +1,24 @@
 import * as BABYLON from '@babylonjs/core/Legacy/legacy'
 
+import { Virus } from '../models'
+
 const PI2 = Math.PI * 2
 
-function createGenes(virus) {
+function createGenes(virus: Virus) {
     return [
         new BABYLON.Vector3(virus.x - (virus.radius / 2), virus.y, 0),
         new BABYLON.Vector3(virus.x + (virus.radius / 2), virus.y, 0),
     ]
 }
 
-function createGenesColor(_virus) {
+function createGenesColor(_virus: Virus) {
     return [
         BABYLON.Color3.Red().toColor4(),
         BABYLON.Color3.Red().toColor4(),
     ]
 }
 
-function createEnvelopeColor(_virus) {
+function createEnvelopeColor(_virus: Virus) {
     const tes = 60
     const step = PI2 / tes
     const path = []
@@ -27,7 +29,7 @@ function createEnvelopeColor(_virus) {
     return path
 }
 
-function createEnvelope(virus) {
+function createEnvelope(virus: Virus) {
     const tes = 60
     const step = PI2 / tes
     const path = []
@@ -41,7 +43,7 @@ function createEnvelope(virus) {
     return path
 }
 
-export function createVirusMesh(virus, scene) {
+export function createVirusMesh(virus: Virus, scene) {
     const lines = [createEnvelope(virus), createGenes(virus)]
     const colors = [createEnvelopeColor(virus), createGenesColor(virus)]
     return BABYLON.MeshBuilder.CreateLineSystem('circle', {
