@@ -5,6 +5,7 @@ import { Cell } from './models'
 import { Virus } from './models'
 
 const canvas = document.getElementById('renderCanvas')
+// @ts-ignore
 const engine = new Engine(canvas, true)
 
 const cell1 = new Cell({
