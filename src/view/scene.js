@@ -10,7 +10,7 @@ const engine = new BABYLON.Engine(canvas, true) // Generate the BABYLON 3D engin
 
 export const createScene = function(cells) {
     const scene = new BABYLON.Scene(engine)
-    scene.clearColor = new BABYLON.Color3(.5, .5, .5)
+    scene.clearColor = new BABYLON.Color3(.5, .5, .5).toColor4()
 
     const camera = new BABYLON.ArcRotateCamera('camera1', 0, 0, 0, new BABYLON.Vector3(0, 0, 0), scene)
     camera.setPosition(new BABYLON.Vector3(0, 0, -50))
