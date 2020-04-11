@@ -5,6 +5,7 @@ export class Cell {
     x: number
     y: number
     radius: number
+    name: string
 
     constructor(properties: Object = {}) {
         Object.assign(this, properties)
