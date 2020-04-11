@@ -29,6 +29,12 @@ const scene = createScene(engine, canvas)
 const cell2d = createCellMesh(cell1, scene)
 const virus2d = createVirusMesh(virus, scene)
 
+scene.registerBeforeRender(function() {
+    if (cell2d.intersectsMesh(virus2d, true)) {
+        console.log('collision')
+    }
+})
+
 addMovement(virus2d, scene)
 
 engine.runRenderLoop(function() {
