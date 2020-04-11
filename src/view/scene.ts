@@ -4,17 +4,11 @@ import { Engine } from '@babylonjs/core/Engines'
 import { HemisphericLight } from '@babylonjs/core/Lights'
 import { Color3, Vector3 } from '@babylonjs/core/Maths/math'
 
-import { Cell, Virus } from '../models'
-
-import { createCellMesh } from './Cell2d'
-import { addMovement } from './movement'
-import { createVirusMesh } from './Virus2d'
-
 const canvas = document.getElementById('renderCanvas')
 // @ts-ignore
 const engine = new Engine(canvas, true)
 
-export const createScene = function(cell: Cell, virus: Virus) {
+export const createScene = function() {
     const scene = new Scene(engine)
     scene.clearColor = new Color3(0.5, 0.5, 0.5).toColor4()
 
@@ -24,11 +18,6 @@ export const createScene = function(cell: Cell, virus: Virus) {
 
     const light = new HemisphericLight('light1', new Vector3(1, 0, 0), scene)
     light.intensity = 0.7
-
-    const cell2d = createCellMesh(cell, scene)
-    const virus2d = createVirusMesh(virus, scene)
-
-    addMovement(virus2d, scene)
 
     return scene
 }

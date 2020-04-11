@@ -1,8 +1,11 @@
 import { Engine } from '@babylonjs/core/Engines'
+import { createCellMesh } from './view/Cell2d'
+import { addMovement } from './view/movement'
 
 import { createScene } from './view/scene'
 import { Cell } from './models'
 import { Virus } from './models'
+import { createVirusMesh } from './view/Virus2d'
 
 const canvas = document.getElementById('renderCanvas')
 // @ts-ignore
@@ -23,7 +26,11 @@ const virus = new Virus({
     name: 'SARS-CoV-2',
 })
 
-const scene = createScene(cell1, virus)
+const scene = createScene()
+const cell2d = createCellMesh(cell1, scene)
+const virus2d = createVirusMesh(virus, scene)
+
+addMovement(virus2d, scene)
 
 engine.runRenderLoop(function() {
     scene.render()
