@@ -26,7 +26,7 @@ const virus = new Virus({
     name: 'SARS-CoV-2',
 })
 
-const scene = createScene(engine)
+const scene = createScene(engine, canvas)
 const cell2d = createCellMesh(cell1, scene)
 const virus2d = createVirusMesh(virus, scene)
 
