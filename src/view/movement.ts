@@ -9,7 +9,7 @@ export function addMovement(virus2d: LinesMesh, scene: Scene) {
         Animation.ANIMATIONTYPE_FLOAT,
         Animation.ANIMATIONLOOPMODE_CYCLE,
     )
-    // Animation keys
+
     const keys = []
     keys.push({ frame: 0, value: 1 })
     keys.push({ frame: 100, value: -9 })
