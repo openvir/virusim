@@ -11,6 +11,7 @@ const cell1 = new Cell({
     x: 0,
     y: 0,
     radius: 10, // 100 μm = 100000 nm
+    name: 'Body Cell',
 })
 
 const virus = new Virus({
