@@ -1,4 +1,4 @@
-import * as BABYLON from '@babylonjs/core/Legacy/legacy'
+import { Vector3 } from '@babylonjs/core/Maths/math'
 
 export function createCellPath(cell) {
     const tes = 60
@@ -9,7 +9,7 @@ export function createCellPath(cell) {
         const x = cell.x + cell.radius * Math.sin(i)
         const z = 0
         const y = cell.y + cell.radius * Math.cos(i)
-        path.push(new BABYLON.Vector3(x, y, z))
+        path.push(new Vector3(x, y, z))
     }
     path.push(path[0])
     return [path]
