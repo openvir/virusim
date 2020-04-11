@@ -4,11 +4,10 @@ import { Animation } from '@babylonjs/core/animations'
 import { ArcRotateCamera } from '@babylonjs/core/Cameras'
 import { HemisphericLight } from '@babylonjs/core/Lights'
 import { Color3, Vector3 } from '@babylonjs/core/Maths/math'
-import { MeshBuilder } from '@babylonjs/core/Meshes'
 
 import { Cell, Virus } from '../models'
 
-import { createCellPath } from './Cell2d'
+import { createCellMesh } from './Cell2d'
 import { createVirusMesh } from './Virus2d'
 
 const canvas = document.getElementById('renderCanvas')
@@ -30,7 +29,7 @@ export const createScene = function(cells) {
         let object2d
 
         if (cell instanceof Cell) {
-            object2d = MeshBuilder.CreateLineSystem('circle', { lines: createCellPath(cell) }, scene)
+            object2d = createCellMesh(cell, scene)
         } else if (cell instanceof Virus) {
             object2d = createVirusMesh(cell, scene)
         }

@@ -1,6 +1,10 @@
-import { Vector3 } from '@babylonjs/core/Maths/math'
+import { Cell } from '../models'
 
-export function createCellPath(cell) {
+import { Vector3 } from '@babylonjs/core/Maths/math'
+import { MeshBuilder } from '@babylonjs/core/Meshes'
+import { LinesMesh } from '@babylonjs/core/Meshes/linesMesh'
+
+export function createCellMesh(cell: Cell, scene): LinesMesh {
     const tes = 60
     const pi2 = Math.PI * 2
     const step = pi2 / tes
@@ -12,5 +16,5 @@ export function createCellPath(cell) {
         path.push(new Vector3(x, y, z))
     }
     path.push(path[0])
-    return [path]
+    return MeshBuilder.CreateLineSystem('circle', { lines: [path] }, scene)
 }
