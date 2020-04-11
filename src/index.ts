@@ -7,8 +7,7 @@ import { Cell } from './models'
 import { Virus } from './models'
 import { createVirusMesh } from './view/Virus2d'
 
-const canvas = document.getElementById('renderCanvas')
-// @ts-ignore
+const canvas = document.getElementById('renderCanvas') as HTMLCanvasElement
 const engine = new Engine(canvas, true)
 
 const cell1 = new Cell({
