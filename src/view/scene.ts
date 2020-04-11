@@ -4,11 +4,9 @@ import { Engine } from '@babylonjs/core/Engines'
 import { HemisphericLight } from '@babylonjs/core/Lights'
 import { Color3, Vector3 } from '@babylonjs/core/Maths/math'
 
-const canvas = document.getElementById('renderCanvas')
-// @ts-ignore
-const engine = new Engine(canvas, true)
+export const createScene = function(engine: Engine) {
+    const canvas = document.getElementById('renderCanvas')
 
-export const createScene = function() {
     const scene = new Scene(engine)
     scene.clearColor = new Color3(0.5, 0.5, 0.5).toColor4()
 
