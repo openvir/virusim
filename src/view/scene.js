@@ -1,4 +1,6 @@
 import * as BABYLON from '@babylonjs/core/Legacy/legacy'
+import { Engine } from '@babylonjs/core/Engines/engine'
+import { Scene } from '@babylonjs/core/scene'
 import { Color3, Vector3 } from '@babylonjs/core/Maths/math'
 import { MeshBuilder } from '@babylonjs/core/Meshes'
 
@@ -8,10 +10,10 @@ import { createCellPath } from './Cell2d'
 import { createVirusMesh } from './Virus2d'
 
 const canvas = document.getElementById('renderCanvas') // Get the canvas element
-const engine = new BABYLON.Engine(canvas, true) // Generate the BABYLON 3D engine
+const engine = new Engine(canvas, true) // Generate the BABYLON 3D engine
 
 export const createScene = function(cells) {
-    const scene = new BABYLON.Scene(engine)
+    const scene = new Scene(engine)
     scene.clearColor = new Color3(.5, .5, .5).toColor4()
 
     const camera = new BABYLON.ArcRotateCamera('camera1', 0, 0, 0, new Vector3(0, 0, 0), scene)
