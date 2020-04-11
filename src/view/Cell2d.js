@@ -1,4 +1,4 @@
-const BABYLON = require('babylonjs')
+import * as BABYLON from '@babylonjs/core/Legacy/legacy'
 
 export function createCellPath(cell) {
     const tes = 60

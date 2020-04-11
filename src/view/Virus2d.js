@@ -1,4 +1,4 @@
-const BABYLON = require('babylonjs')
+import * as BABYLON from '@babylonjs/core/Legacy/legacy'
 
 const PI2 = Math.PI * 2
 

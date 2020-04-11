@@ -28,7 +28,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "babylonjs": "^4.1.0",
+    "@babylonjs/core": "^4.1.0",
     "lodash": "^4.17.15"
   }
 }

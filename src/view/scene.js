@@ -1,9 +1,9 @@
+import * as BABYLON from '@babylonjs/core/Legacy/legacy';
+
 import { Cell, Virus } from '../models'
 
 import { createCellPath } from './Cell2d'
 import { createVirusMesh } from './Virus2d'
-
-const BABYLON = require('babylonjs')
 
 const canvas = document.getElementById('renderCanvas') // Get the canvas element
 const engine = new BABYLON.Engine(canvas, true) // Generate the BABYLON 3D engine

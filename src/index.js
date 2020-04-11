@@ -1,6 +1,8 @@
+import * as BABYLON from '@babylonjs/core/Legacy/legacy';
+
 import { createScene } from './view/scene'
-import { Cell } from './models/Cell'
-import { Virus } from './models/Virus'
+import { Cell } from './models'
+import { Virus } from './models'
 
 var canvas = document.getElementById('renderCanvas') // Get the canvas element
 var engine = new BABYLON.Engine(canvas, true) // Generate the BABYLON 3D engine
