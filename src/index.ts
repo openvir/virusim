@@ -18,8 +18,8 @@ const cell1 = new Cell({
 })
 
 const virus = new Virus({
-    x: 10,
-    y: 10,
+    x: 20,
+    y: 0,
     radius: 1, // 120 nm
     moving: true,
     name: 'SARS-CoV-2',
