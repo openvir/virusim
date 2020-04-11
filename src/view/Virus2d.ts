@@ -1,13 +1,15 @@
 import * as BABYLON from '@babylonjs/core/Legacy/legacy'
 
+import { Vector3 } from '@babylonjs/core/Maths/math'
+
 import { Virus } from '../models'
 
 const PI2 = Math.PI * 2
 
 function createGenes(virus: Virus) {
     return [
-        new BABYLON.Vector3(virus.x - (virus.radius / 2), virus.y, 0),
-        new BABYLON.Vector3(virus.x + (virus.radius / 2), virus.y, 0),
+        new Vector3(virus.x - (virus.radius / 2), virus.y, 0),
+        new Vector3(virus.x + (virus.radius / 2), virus.y, 0),
     ]
 }
 
@@ -37,7 +39,7 @@ function createEnvelope(virus: Virus) {
         const x = virus.x + virus.radius * Math.sin(i)
         const z = 0
         const y = virus.y + virus.radius * Math.cos(i)
-        path.push(new BABYLON.Vector3(x, y, z))
+        path.push(new Vector3(x, y, z))
     }
     path.push(path[0])
     return path
