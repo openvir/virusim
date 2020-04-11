@@ -14,7 +14,7 @@ const canvas = document.getElementById('renderCanvas')
 // @ts-ignore
 const engine = new Engine(canvas, true)
 
-export const createScene = function(cells) {
+export const createScene = function(cell: Cell, virus: Virus) {
     const scene = new Scene(engine)
     scene.clearColor = new Color3(0.5, 0.5, 0.5).toColor4()
 
@@ -25,38 +25,29 @@ export const createScene = function(cells) {
     const light = new HemisphericLight('light1', new Vector3(1, 0, 0), scene)
     light.intensity = 0.7
 
-    for (const cell of cells) {
-        let object2d
+    const cell2d = createCellMesh(cell, scene)
+    const virus2d = createVirusMesh(virus, scene)
 
-        if (cell instanceof Cell) {
-            object2d = createCellMesh(cell, scene)
-        } else if (cell instanceof Virus) {
-            object2d = createVirusMesh(cell, scene)
-        }
+    const animationBox = new Animation(
+        'tutoAnimation',
+        'position.x',
+        30,
+        Animation.ANIMATIONTYPE_FLOAT,
+        Animation.ANIMATIONLOOPMODE_CYCLE,
+    )
+    // Animation keys
+    const keys = []
+    keys.push({ frame: 0, value: 1 })
+    keys.push({ frame: 100, value: -5 })
 
-        if (cell.moving) {
-            const animationBox = new Animation(
-                'tutoAnimation',
-                'position.x',
-                30,
-                Animation.ANIMATIONTYPE_FLOAT,
-                Animation.ANIMATIONLOOPMODE_CYCLE,
-            )
-            // Animation keys
-            const keys = []
-            keys.push({ frame: 0, value: 1 })
-            keys.push({ frame: 100, value: -5 })
+    animationBox.setKeys(keys)
 
-            animationBox.setKeys(keys)
+    virus2d.animations.push(animationBox)
 
-            object2d.animations.push(animationBox)
-
-            setTimeout(async () => {
-                const anim = scene.beginAnimation(object2d, 0, 100, false)
-                await anim.waitAsync()
-            })
-        }
-    }
+    setTimeout(async () => {
+        const anim = scene.beginAnimation(virus2d, 0, 100, false)
+        await anim.waitAsync()
+    })
 
     return scene
 }

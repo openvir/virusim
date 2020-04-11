@@ -23,7 +23,7 @@ const virus = new Virus({
     name: 'SARS-CoV-2',
 })
 
-const scene = createScene([cell1, virus])
+const scene = createScene(cell1, virus)
 
 engine.runRenderLoop(function() {
     scene.render()
