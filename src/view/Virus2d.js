@@ -9,6 +9,24 @@ function createGenes(virus) {
     ]
 }
 
+function createGenesColor(_virus) {
+    return [
+        BABYLON.Color3.Red().toColor4(),
+        BABYLON.Color3.Red().toColor4(),
+    ]
+}
+
+function createEnvelopeColor(_virus) {
+    const tes = 60
+    const step = PI2 / tes
+    const path = []
+    for (let i = 0; i < PI2; i += step) {
+        path.push(BABYLON.Color3.White().toColor4())
+    }
+    path.push(BABYLON.Color3.White().toColor4())
+    return path
+}
+
 function createEnvelope(virus) {
     const tes = 60
     const step = PI2 / tes
@@ -25,7 +43,9 @@ function createEnvelope(virus) {
 
 export function createVirusMesh(virus, scene) {
     const lines = [createEnvelope(virus), createGenes(virus)]
-    const mesh = BABYLON.MeshBuilder.CreateLineSystem('circle', { lines: lines }, scene)
-    mesh.color = BABYLON.Color3.Red()
-    return mesh
+    const colors = [createEnvelopeColor(virus), createGenesColor(virus)]
+    return BABYLON.MeshBuilder.CreateLineSystem('circle', {
+        colors: colors,
+        lines: lines,
+    }, scene)
 }
