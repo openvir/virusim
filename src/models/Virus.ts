@@ -3,6 +3,7 @@ export class Virus {
     y: number
     radius: number
     moving: boolean
+    name: string
 
     constructor(properties: Object = {}) {
         Object.assign(this, properties)

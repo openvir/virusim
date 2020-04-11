@@ -18,6 +18,7 @@ const virus = new Virus({
     y: 10,
     radius: 1, // 120 nm
     moving: true,
+    name: 'SARS-CoV-2',
 })
 
 const scene = createScene([cell1, virus])
