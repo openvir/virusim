@@ -1,7 +1,9 @@
+import { Scene } from '@babylonjs/core'
 import { Color3, Vector3 } from '@babylonjs/core/Maths/math'
 import { MeshBuilder } from '@babylonjs/core/Meshes'
 import { LinesMesh } from '@babylonjs/core/Meshes/linesMesh'
 import { AdvancedDynamicTexture, TextBlock } from '@babylonjs/gui'
+
 import { Virus } from '../models'
 
 const PI2 = Math.PI * 2
@@ -39,7 +41,7 @@ function createEnvelope(virus: Virus) {
     return path
 }
 
-export function createVirusMesh(virus: Virus, scene): LinesMesh {
+export function createVirusMesh(virus: Virus, scene: Scene): LinesMesh {
     const lines = [createEnvelope(virus), createGenes(virus)]
     const colors = [createEnvelopeColor(virus), createGenesColor(virus)]
 
