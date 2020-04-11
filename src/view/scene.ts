@@ -1,6 +1,6 @@
 import { Engine } from '@babylonjs/core/Engines'
 import { Scene } from '@babylonjs/core'
-import { Animation } from '@babylonjs/core/animations'
+import { Animation } from '@babylonjs/core/Animations'
 import { ArcRotateCamera } from '@babylonjs/core/Cameras'
 import { HemisphericLight } from '@babylonjs/core/Lights'
 import { Color3, Vector3 } from '@babylonjs/core/Maths/math'
