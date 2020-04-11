@@ -1,5 +1,5 @@
-import { Engine } from '@babylonjs/core/Engines/engine'
-import { Scene } from '@babylonjs/core/scene'
+import { Engine } from '@babylonjs/core/Engines'
+import { Scene } from '@babylonjs/core'
 import { Animation } from '@babylonjs/core/animations'
 import { ArcRotateCamera } from '@babylonjs/core/Cameras'
 import { HemisphericLight } from '@babylonjs/core/Lights'
@@ -11,8 +11,9 @@ import { Cell, Virus } from '../models'
 import { createCellPath } from './Cell2d'
 import { createVirusMesh } from './Virus2d'
 
-const canvas = document.getElementById('renderCanvas') // Get the canvas element
-const engine = new Engine(canvas, true) // Generate the BABYLON 3D engine
+const canvas = document.getElementById('renderCanvas')
+// @ts-ignore
+const engine = new Engine(canvas, true)
 
 export const createScene = function(cells) {
     const scene = new Scene(engine)
