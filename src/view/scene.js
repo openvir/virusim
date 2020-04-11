@@ -1,6 +1,7 @@
 import * as BABYLON from '@babylonjs/core/Legacy/legacy'
 import { Engine } from '@babylonjs/core/Engines/engine'
 import { Scene } from '@babylonjs/core/scene'
+import { HemisphericLight } from '@babylonjs/core/Lights'
 import { Color3, Vector3 } from '@babylonjs/core/Maths/math'
 import { MeshBuilder } from '@babylonjs/core/Meshes'
 
@@ -20,7 +21,7 @@ export const createScene = function(cells) {
     camera.setPosition(new Vector3(0, 0, -50))
     camera.attachControl(canvas, true)
 
-    const light = new BABYLON.HemisphericLight('light1', new Vector3(1, 0, 0), scene)
+    const light = new HemisphericLight('light1', new Vector3(1, 0, 0), scene)
     light.intensity = 0.7
 
     for (const cell of cells) {
