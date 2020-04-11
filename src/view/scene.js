@@ -1,6 +1,7 @@
 import * as BABYLON from '@babylonjs/core/Legacy/legacy'
 import { Engine } from '@babylonjs/core/Engines/engine'
 import { Scene } from '@babylonjs/core/scene'
+import { Animation } from '@babylonjs/core/animations'
 import { ArcRotateCamera } from '@babylonjs/core/Cameras'
 import { HemisphericLight } from '@babylonjs/core/Lights'
 import { Color3, Vector3 } from '@babylonjs/core/Maths/math'
@@ -35,7 +36,7 @@ export const createScene = function(cells) {
         }
 
         if (cell.moving) {
-            const animationBox = new BABYLON.Animation('tutoAnimation', 'position.x', 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT,
+            const animationBox = new Animation('tutoAnimation', 'position.x', 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT,
                 BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE)
             // Animation keys
             const keys = []
