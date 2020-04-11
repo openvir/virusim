@@ -1,6 +1,7 @@
 import * as BABYLON from '@babylonjs/core/Legacy/legacy'
 import { Engine } from '@babylonjs/core/Engines/engine'
 import { Scene } from '@babylonjs/core/scene'
+import { ArcRotateCamera } from '@babylonjs/core/Cameras'
 import { HemisphericLight } from '@babylonjs/core/Lights'
 import { Color3, Vector3 } from '@babylonjs/core/Maths/math'
 import { MeshBuilder } from '@babylonjs/core/Meshes'
@@ -17,7 +18,7 @@ export const createScene = function(cells) {
     const scene = new Scene(engine)
     scene.clearColor = new Color3(.5, .5, .5).toColor4()
 
-    const camera = new BABYLON.ArcRotateCamera('camera1', 0, 0, 0, new Vector3(0, 0, 0), scene)
+    const camera = new ArcRotateCamera('camera1', 0, 0, 0, new Vector3(0, 0, 0), scene)
     camera.setPosition(new Vector3(0, 0, -50))
     camera.attachControl(canvas, true)
 
