@@ -7,17 +7,11 @@ import { Virus } from '../models'
 const PI2 = Math.PI * 2
 
 function createGenes(virus: Virus) {
-    return [
-        new Vector3(virus.x - (virus.radius / 2), virus.y, 0),
-        new Vector3(virus.x + (virus.radius / 2), virus.y, 0),
-    ]
+    return [new Vector3(virus.x - virus.radius / 2, virus.y, 0), new Vector3(virus.x + virus.radius / 2, virus.y, 0)]
 }
 
 function createGenesColor(_virus: Virus) {
-    return [
-        Color3.Red().toColor4(),
-        Color3.Red().toColor4(),
-    ]
+    return [Color3.Red().toColor4(), Color3.Red().toColor4()]
 }
 
 function createEnvelopeColor(_virus: Virus) {
@@ -49,10 +43,14 @@ export function createVirusMesh(virus: Virus, scene): LinesMesh {
     const lines = [createEnvelope(virus), createGenes(virus)]
     const colors = [createEnvelopeColor(virus), createGenesColor(virus)]
 
-    const mesh = MeshBuilder.CreateLineSystem('circle', {
-        colors: colors,
-        lines: lines,
-    }, scene)
+    const mesh = MeshBuilder.CreateLineSystem(
+        'circle',
+        {
+            colors: colors,
+            lines: lines,
+        },
+        scene,
+    )
 
     const advancedTexture = AdvancedDynamicTexture.CreateFullscreenUI('UI')
     const text1 = new TextBlock()

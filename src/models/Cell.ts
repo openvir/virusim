@@ -7,7 +7,7 @@ export class Cell {
     radius: number
     name: string
 
-    constructor(properties: Object = {}) {
+    constructor(properties: Record<string, any> = {}) {
         Object.assign(this, properties)
     }
 

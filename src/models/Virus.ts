@@ -5,7 +5,7 @@ export class Virus {
     moving: boolean
     name: string
 
-    constructor(properties: Object = {}) {
+    constructor(properties: Record<string, any> = {}) {
         Object.assign(this, properties)
     }
 }

@@ -12,12 +12,11 @@ export class Bond {
         if (Object.keys(this.elements).length !== 2) {
             throw new Error('A bond needs two elements.')
         }
-
     }
 
     electronegativity(): number {
-        let element1 = Object.keys(this.elements)[0]
-        let element2 = Object.keys(this.elements)[1]
+        const element1 = Object.keys(this.elements)[0]
+        const element2 = Object.keys(this.elements)[1]
 
         return Math.abs(ELEMENTS[element1].electronegativity_pauling - ELEMENTS[element2].electronegativity_pauling)
     }

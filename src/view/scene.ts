@@ -16,7 +16,7 @@ const engine = new Engine(canvas, true)
 
 export const createScene = function(cells) {
     const scene = new Scene(engine)
-    scene.clearColor = new Color3(.5, .5, .5).toColor4()
+    scene.clearColor = new Color3(0.5, 0.5, 0.5).toColor4()
 
     const camera = new ArcRotateCamera('camera1', 0, 0, 0, new Vector3(0, 0, 0), scene)
     camera.setPosition(new Vector3(0, 0, -50))
@@ -35,8 +35,13 @@ export const createScene = function(cells) {
         }
 
         if (cell.moving) {
-            const animationBox = new Animation('tutoAnimation', 'position.x', 30, Animation.ANIMATIONTYPE_FLOAT,
-                Animation.ANIMATIONLOOPMODE_CYCLE)
+            const animationBox = new Animation(
+                'tutoAnimation',
+                'position.x',
+                30,
+                Animation.ANIMATIONTYPE_FLOAT,
+                Animation.ANIMATIONLOOPMODE_CYCLE,
+            )
             // Animation keys
             const keys = []
             keys.push({ frame: 0, value: 1 })
