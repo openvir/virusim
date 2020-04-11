@@ -1,4 +1,6 @@
-import * as BABYLON from '@babylonjs/core/Legacy/legacy';
+import * as BABYLON from '@babylonjs/core/Legacy/legacy'
+import { Color3, Vector3 } from '@babylonjs/core/Maths/math'
+import { MeshBuilder } from '@babylonjs/core/Meshes'
 
 import { Cell, Virus } from '../models'
 
@@ -10,20 +12,20 @@ const engine = new BABYLON.Engine(canvas, true) // Generate the BABYLON 3D engin
 
 export const createScene = function(cells) {
     const scene = new BABYLON.Scene(engine)
-    scene.clearColor = new BABYLON.Color3(.5, .5, .5).toColor4()
+    scene.clearColor = new Color3(.5, .5, .5).toColor4()
 
-    const camera = new BABYLON.ArcRotateCamera('camera1', 0, 0, 0, new BABYLON.Vector3(0, 0, 0), scene)
-    camera.setPosition(new BABYLON.Vector3(0, 0, -50))
+    const camera = new BABYLON.ArcRotateCamera('camera1', 0, 0, 0, new Vector3(0, 0, 0), scene)
+    camera.setPosition(new Vector3(0, 0, -50))
     camera.attachControl(canvas, true)
 
-    const light = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(1, 0, 0), scene)
+    const light = new BABYLON.HemisphericLight('light1', new Vector3(1, 0, 0), scene)
     light.intensity = 0.7
 
     for (const cell of cells) {
         let object2d
 
         if (cell instanceof Cell) {
-            object2d = BABYLON.MeshBuilder.CreateLineSystem('circle', { lines: createCellPath(cell) }, scene)
+            object2d = MeshBuilder.CreateLineSystem('circle', { lines: createCellPath(cell) }, scene)
         } else if (cell instanceof Virus) {
             object2d = createVirusMesh(cell, scene)
         }
