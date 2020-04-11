@@ -130,11 +130,19 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@babylonjs/core@^4.1.0":
+"@babylonjs/core@4.1.0", "@babylonjs/core@^4.1.0":
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@babylonjs/core/-/core-4.1.0.tgz#63e390862debf81f8cf248496187029c42ea5eda"
   integrity sha512-4pEKPEu14qRdqH5qatfmns/iHFHmujDI22SXkHIlJhTT0WgJH4I8IN1fPw9sU6jSCH2ul76Lpbi2zREvfrEDQA==
   dependencies:
+    tslib "^1.10.0"
+
+"@babylonjs/gui@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/gui/-/gui-4.1.0.tgz#b889251a6279fa3c05e97d3b225b7d4f2de180c5"
+  integrity sha512-H4+zkIMGQlqJ8r3KNlI1fY31v3AssauY7/IMXzl4GloXqmELE+A46h85q/fzY+0SPzXlD4lE0i3BqXkTIUKw+g==
+  dependencies:
+    "@babylonjs/core" "4.1.0"
     tslib "^1.10.0"
 
 "@cnakazawa/watch@^1.0.3":

@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@babylonjs/core": "^4.1.0",
+    "@babylonjs/gui": "^4.1.0",
     "lodash": "^4.17.15"
   }
 }

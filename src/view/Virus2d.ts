@@ -1,6 +1,6 @@
 import { Color3, Vector3 } from '@babylonjs/core/Maths/math'
 import { MeshBuilder } from '@babylonjs/core/Meshes'
-
+import { AdvancedDynamicTexture, TextBlock } from '@babylonjs/gui'
 import { Virus } from '../models'
 
 const PI2 = Math.PI * 2
@@ -47,8 +47,20 @@ function createEnvelope(virus: Virus) {
 export function createVirusMesh(virus: Virus, scene) {
     const lines = [createEnvelope(virus), createGenes(virus)]
     const colors = [createEnvelopeColor(virus), createGenesColor(virus)]
-    return MeshBuilder.CreateLineSystem('circle', {
+
+    const mesh = MeshBuilder.CreateLineSystem('circle', {
         colors: colors,
         lines: lines,
     }, scene)
+
+    const advancedTexture = AdvancedDynamicTexture.CreateFullscreenUI('UI')
+    const text1 = new TextBlock()
+    text1.text = virus.name
+    text1.color = 'white'
+    text1.fontSize = 12
+    advancedTexture.addControl(text1)
+    text1.linkWithMesh(mesh)
+    text1.linkOffsetY = -30
+
+    return mesh
 }
