@@ -38,8 +38,8 @@ const collisionDetection = function() {
 }
 scene.registerBeforeRender(collisionDetection)
 
-addMovement(virus2d, scene)
-addMovement(virusGenes2d, scene)
+addMovement(virus2d, scene, 1, -9)
+addMovement(virusGenes2d, scene, 1, -9)
 
 engine.runRenderLoop(function() {
     scene.render()
