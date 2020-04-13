@@ -37,6 +37,11 @@ const startTranslation = function() {
         finalValue: -10,
         targetProperty: 'position.z',
     })
+    addAnimation(bodyScene.camera, scene, {
+        initialValue: bodyScene.camera.position.x,
+        finalValue: 5,
+        targetProperty: 'position.x',
+    })
 }
 
 const virusCellMembraneFusion = function() {
