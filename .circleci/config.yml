@@ -11,7 +11,23 @@ jobs:
           steps:
             - run: npm install
             - run: npm test
+  deploy-production:
+    machine:
+      enabled: true
+    working_directory: ~/virusim
+    steps:
+      - checkout
+      - run:
+          name: Deploy virusim to Heroku (Production)
+          command: |
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/virusim-production.git master
 workflows:
-    build-and-test:
-      jobs:
-        - build-and-test
+  build-and-test:
+    jobs:
+      - build-and-test
+      - deploy-production:
+      requires:
+        - build
+      filters:
+        branches:
+          only: master
