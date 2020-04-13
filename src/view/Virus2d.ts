@@ -41,9 +41,18 @@ function createEnvelope(virus: Virus) {
     return path
 }
 
+export function createVirusGenes(virus: Virus, scene: Scene): LinesMesh {
+    const points = createGenes(virus)
+
+    const mesh = MeshBuilder.CreateLines('circle', { points: points }, scene)
+    mesh.color = Color3.Red()
+
+    return mesh
+}
+
 export function createVirusMesh(virus: Virus, scene: Scene): LinesMesh {
-    const lines = [createEnvelope(virus), createGenes(virus)]
-    const colors = [createEnvelopeColor(virus), createGenesColor(virus)]
+    const lines = [createEnvelope(virus)]
+    const colors = [createEnvelopeColor(virus)]
 
     const mesh = MeshBuilder.CreateLineSystem(
         'circle',
