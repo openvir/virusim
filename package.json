@@ -5,7 +5,7 @@
   "author": "dgrusemann <dominik.grusemann@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
+    "build": "NODE_ENV=production webpack --mode production && cpx index.html dist",
     "start": "NODE_ENV=production node index.js",
     "start:dev": "webpack-dev-server",
     "test": "jest",
@@ -15,6 +15,7 @@
     "@types/jest": "^25.2.1",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
+    "cpx": "^1.5.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-import": "^2.20.2",
