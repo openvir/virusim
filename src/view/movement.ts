@@ -2,7 +2,7 @@ import { LinesMesh, Scene } from '@babylonjs/core'
 import { Animation } from '@babylonjs/core/Animations'
 
 export function addMovement(virus2d: LinesMesh, scene: Scene, initialValue: number, finalValue: number, onMovementFinished?: () => void) {
-    const animationBox = new Animation(
+    const animation = new Animation(
         'tutoAnimation',
         'position.x',
         30,
@@ -14,9 +14,9 @@ export function addMovement(virus2d: LinesMesh, scene: Scene, initialValue: numb
     keys.push({ frame: 0, value: initialValue })
     keys.push({ frame: 100, value: finalValue })
 
-    animationBox.setKeys(keys)
+    animation.setKeys(keys)
 
-    virus2d.animations.push(animationBox)
+    virus2d.animations.push(animation)
 
     setTimeout(async () => {
         const anim = scene.beginAnimation(virus2d, 0, 100, false, 1.0, onMovementFinished)
