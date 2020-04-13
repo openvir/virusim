@@ -32,6 +32,7 @@ const virusGenes2d = createVirusGenesMesh(virus, scene)
 
 const virusCellMembraneFusion = function() {
     console.log('Starting virus cell membrane fusion...')
+    addMovement(virusGenes2d, scene, -9, -15)
 }
 
 const collisionDetection = function() {
