@@ -1,8 +1,9 @@
 import { Engine } from '@babylonjs/core/Engines'
+import { Vector3 } from '@babylonjs/core/Maths/math'
 import { createCellMesh } from './view/Cell2d'
 import { addMovement } from './view/movement'
 
-import { createScene } from './view/scene'
+import { BodyScene } from './view/scene'
 import { Cell } from './models'
 import { Virus } from './models'
 import { createVirusGenesMesh, createVirusMesh } from './view/Virus2d'
@@ -24,13 +25,15 @@ const virus = new Virus({
     name: 'SARS-CoV-2',
 })
 
-const scene = createScene(engine, canvas)
+const bodyScene = new BodyScene(engine, canvas)
+const scene = bodyScene.scene
 const cell2d = createCellMesh(cell1, scene)
 const virus2d = createVirusMesh(virus, scene)
 const virusGenes2d = createVirusGenesMesh(virus, scene)
 
 const startTranslation = function() {
     console.log('Starting translation...')
+    bodyScene.camera.setPosition((new Vector3(0, 0, -10)))
 }
 
 const virusCellMembraneFusion = function() {
