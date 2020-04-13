@@ -7,6 +7,22 @@ import { LinesMesh } from '@babylonjs/core/Meshes/linesMesh'
 import { Cell } from '../models'
 
 const CELL_RADIUS = 10 // 100 μm = 100000 nm
+const RIBOSOME_RADIUS = 0.1 // 20 nm
+
+function createRibosomePoints(x0: number, y0: number) {
+    const tes = 60
+    const pi2 = Math.PI * 2
+    const step = pi2 / tes
+    const points = []
+    for (let i = 0; i < pi2; i += step) {
+        const x = x0 + RIBOSOME_RADIUS * Math.sin(i)
+        const z = 0
+        const y = y0 + RIBOSOME_RADIUS * Math.cos(i)
+        points.push(new Vector3(x, y, z))
+    }
+    points.push(points[0])
+    return points
+}
 
 function createCellMembranePoints(cell: Cell) {
     const tes = 60
@@ -24,8 +40,13 @@ function createCellMembranePoints(cell: Cell) {
 }
 
 export function createCellMesh(cell: Cell, scene: Scene): LinesMesh {
-    const cellMembranePoints = createCellMembranePoints(cell)
-    const mesh = MeshBuilder.CreateLineSystem('circle', { lines: [cellMembranePoints] }, scene)
+    const lines = []
+    lines.push(createCellMembranePoints(cell))
+    lines.push(createRibosomePoints(3, 3))
+    lines.push(createRibosomePoints(3, 2.5))
+    lines.push(createRibosomePoints(3.5, 3.5))
+    lines.push(createRibosomePoints(4, 3))
+    const mesh = MeshBuilder.CreateLineSystem('circle', { lines: lines }, scene)
 
     const advancedTexture = AdvancedDynamicTexture.CreateFullscreenUI('UI')
     const text1 = new TextBlock()

@@ -1,19 +1,21 @@
-import { Scene } from '@babylonjs/core'
-import { ArcRotateCamera } from '@babylonjs/core/Cameras'
+import { Light, Scene, UniversalCamera } from '@babylonjs/core'
 import { Engine } from '@babylonjs/core/Engines'
 import { HemisphericLight } from '@babylonjs/core/Lights'
 import { Color3, Vector3 } from '@babylonjs/core/Maths/math'
 
-export const createScene = function(engine: Engine, canvas) {
-    const scene = new Scene(engine)
-    scene.clearColor = new Color3(0.5, 0.5, 0.5).toColor4()
+export class BodyScene {
+    scene: Scene
+    camera: UniversalCamera
+    light: Light
 
-    const camera = new ArcRotateCamera('camera1', 0, 0, 0, new Vector3(0, 0, 0), scene)
-    camera.setPosition(new Vector3(0, 0, -50))
-    camera.attachControl(canvas, true)
+    constructor(engine: Engine, canvas) {
+        this.scene = new Scene(engine)
+        this.scene.clearColor = new Color3(0.5, 0.5, 0.5).toColor4()
 
-    const light = new HemisphericLight('light1', new Vector3(1, 0, 0), scene)
-    light.intensity = 0.7
+        this.camera = new UniversalCamera('camera1', new Vector3(0, 0, -50), this.scene)
+        this.camera.attachControl(canvas, true)
 
-    return scene
+        this.light = new HemisphericLight('light1', new Vector3(1, 0, 0), this.scene)
+        this.light.intensity = 0.7
+    }
 }

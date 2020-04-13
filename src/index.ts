@@ -1,8 +1,8 @@
 import { Engine } from '@babylonjs/core/Engines'
 import { createCellMesh } from './view/Cell2d'
-import { addMovement } from './view/movement'
+import { addAnimation } from './view/movement'
 
-import { createScene } from './view/scene'
+import { BodyScene } from './view/scene'
 import { Cell } from './models'
 import { Virus } from './models'
 import { createVirusGenesMesh, createVirusMesh } from './view/Virus2d'
@@ -24,14 +24,31 @@ const virus = new Virus({
     name: 'SARS-CoV-2',
 })
 
-const scene = createScene(engine, canvas)
+const bodyScene = new BodyScene(engine, canvas)
+const scene = bodyScene.scene
 const cell2d = createCellMesh(cell1, scene)
 const virus2d = createVirusMesh(virus, scene)
 const virusGenes2d = createVirusGenesMesh(virus, scene)
 
+const startTranslation = function() {
+    console.log('Starting translation...')
+    addAnimation(bodyScene.camera, scene, {
+        initialValue: bodyScene.camera.position.z,
+        finalValue: -10,
+        targetProperty: 'position.z',
+    })
+    addAnimation(bodyScene.camera, scene, {
+        initialValue: bodyScene.camera.position.x,
+        finalValue: 5,
+        targetProperty: 'position.x',
+    })
+}
+
 const virusCellMembraneFusion = function() {
     console.log('Starting virus cell membrane fusion...')
-    addMovement(virusGenes2d, scene, -9, -15)
+    addAnimation(virusGenes2d, scene, { initialValue: -9, finalValue: -15, targetProperty: 'position.x' }, () => {
+        startTranslation()
+    })
 }
 
 const collisionDetection = function() {
@@ -42,8 +59,16 @@ const collisionDetection = function() {
 }
 scene.registerBeforeRender(collisionDetection)
 
-addMovement(virus2d, scene, 1, -9)
-addMovement(virusGenes2d, scene, 1, -9)
+addAnimation(virus2d, scene, {
+    initialValue: 1,
+    finalValue: -9,
+    targetProperty: 'position.x',
+})
+addAnimation(virusGenes2d, scene, {
+    initialValue: 1,
+    finalValue: -9,
+    targetProperty: 'position.x',
+})
 
 engine.runRenderLoop(function() {
     scene.render()
