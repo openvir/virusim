@@ -3,13 +3,14 @@ import { Animation } from '@babylonjs/core/Animations'
 
 type Params = {
     initialValue: number,
-    finalValue: number
+    finalValue: number,
+    targetProperty: string
 }
 
 export function addMovement(target: any, scene: Scene, params: Params, onMovementFinished?: () => void) {
     const animation = new Animation(
         'tutoAnimation',
-        'position.x',
+        params.targetProperty,
         30,
         Animation.ANIMATIONTYPE_FLOAT,
         Animation.ANIMATIONLOOPMODE_CYCLE,
