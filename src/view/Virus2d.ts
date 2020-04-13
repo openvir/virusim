@@ -8,12 +8,8 @@ import { Virus } from '../models'
 
 const PI2 = Math.PI * 2
 
-function createGenes(virus: Virus) {
+function createGenesPoints(virus: Virus) {
     return [new Vector3(virus.x - virus.radius / 2, virus.y, 0), new Vector3(virus.x + virus.radius / 2, virus.y, 0)]
-}
-
-function createGenesColor(_virus: Virus) {
-    return [Color3.Red().toColor4(), Color3.Red().toColor4()]
 }
 
 function createEnvelopeColor(_virus: Virus) {
@@ -42,11 +38,8 @@ function createEnvelope(virus: Virus) {
 }
 
 export function createVirusGenesMesh(virus: Virus, scene: Scene): LinesMesh {
-    const points = createGenes(virus)
-
-    const mesh = MeshBuilder.CreateLines('circle', { points: points }, scene)
+    const mesh = MeshBuilder.CreateLines('circle', { points: createGenesPoints(virus) }, scene)
     mesh.color = Color3.Red()
-
     return mesh
 }
 
