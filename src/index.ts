@@ -13,7 +13,6 @@ const engine = new Engine(canvas, true)
 const cell1 = new Cell({
     x: 0,
     y: 0,
-    radius: 10, // 100 μm = 100000 nm
     name: 'Body Cell',
 })
 

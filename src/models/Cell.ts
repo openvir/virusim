@@ -4,7 +4,6 @@ import { Virus } from './Virus'
 export class Cell {
     x: number
     y: number
-    radius: number
     name: string
 
     constructor(properties: Record<string, any> = {}) {

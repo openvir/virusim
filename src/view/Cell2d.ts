@@ -6,15 +6,17 @@ import { LinesMesh } from '@babylonjs/core/Meshes/linesMesh'
 
 import { Cell } from '../models'
 
+const CELL_RADIUS = 10 // 100 μm = 100000 nm
+
 function createCellMembranePoints(cell: Cell) {
     const tes = 60
     const pi2 = Math.PI * 2
     const step = pi2 / tes
     const points = []
     for (let i = 0; i < pi2; i += step) {
-        const x = cell.x + cell.radius * Math.sin(i)
+        const x = cell.x + CELL_RADIUS * Math.sin(i)
         const z = 0
-        const y = cell.y + cell.radius * Math.cos(i)
+        const y = cell.y + CELL_RADIUS * Math.cos(i)
         points.push(new Vector3(x, y, z))
     }
     points.push(points[0])
@@ -32,7 +34,7 @@ export function createCellMesh(cell: Cell, scene: Scene): LinesMesh {
     text1.fontSize = 12
     advancedTexture.addControl(text1)
     text1.linkWithMesh(mesh)
-    text1.linkOffsetY = cell.radius + 160
+    text1.linkOffsetY = CELL_RADIUS + 160
 
     return mesh
 }
