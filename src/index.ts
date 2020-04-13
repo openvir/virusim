@@ -33,9 +33,9 @@ const virusGenes2d = createVirusGenesMesh(virus, scene)
 const startTranslation = function() {
     console.log('Starting translation...')
     addMovement(bodyScene.camera, scene, {
-        initialValue: bodyScene.camera.radius,
-        finalValue: 10,
-        targetProperty: 'radius',
+        initialValue: bodyScene.camera.position.z,
+        finalValue: -10,
+        targetProperty: 'position.z',
     })
 }
 
