@@ -29,9 +29,15 @@ const cell2d = createCellMesh(cell1, scene)
 const virus2d = createVirusMesh(virus, scene)
 const virusGenes2d = createVirusGenesMesh(virus, scene)
 
+const startTranslation = function() {
+    console.log('Starting translation...')
+}
+
 const virusCellMembraneFusion = function() {
     console.log('Starting virus cell membrane fusion...')
-    addMovement(virusGenes2d, scene, -9, -15)
+    addMovement(virusGenes2d, scene, -9, -15, () => {
+        startTranslation()
+    })
 }
 
 const collisionDetection = function() {
