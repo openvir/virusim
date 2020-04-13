@@ -1,6 +1,6 @@
 import { Engine } from '@babylonjs/core/Engines'
 import { createCellMesh } from './view/Cell2d'
-import { addMovement } from './view/movement'
+import { addAnimation } from './view/movement'
 
 import { BodyScene } from './view/scene'
 import { Cell } from './models'
@@ -32,7 +32,7 @@ const virusGenes2d = createVirusGenesMesh(virus, scene)
 
 const startTranslation = function() {
     console.log('Starting translation...')
-    addMovement(bodyScene.camera, scene, {
+    addAnimation(bodyScene.camera, scene, {
         initialValue: bodyScene.camera.position.z,
         finalValue: -10,
         targetProperty: 'position.z',
@@ -41,7 +41,7 @@ const startTranslation = function() {
 
 const virusCellMembraneFusion = function() {
     console.log('Starting virus cell membrane fusion...')
-    addMovement(virusGenes2d, scene, { initialValue: -9, finalValue: -15, targetProperty: 'position.x' }, () => {
+    addAnimation(virusGenes2d, scene, { initialValue: -9, finalValue: -15, targetProperty: 'position.x' }, () => {
         startTranslation()
     })
 }
@@ -54,12 +54,12 @@ const collisionDetection = function() {
 }
 scene.registerBeforeRender(collisionDetection)
 
-addMovement(virus2d, scene, {
+addAnimation(virus2d, scene, {
     initialValue: 1,
     finalValue: -9,
     targetProperty: 'position.x',
 })
-addMovement(virusGenes2d, scene, {
+addAnimation(virusGenes2d, scene, {
     initialValue: 1,
     finalValue: -9,
     targetProperty: 'position.x',

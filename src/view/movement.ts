@@ -7,7 +7,7 @@ type Params = {
     targetProperty: string
 }
 
-export function addMovement(target: any, scene: Scene, params: Params, onMovementFinished?: () => void) {
+export function addAnimation(target: any, scene: Scene, params: Params, onMovementFinished?: () => void) {
     const animation = new Animation(
         'tutoAnimation',
         params.targetProperty,
