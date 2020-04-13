@@ -17,4 +17,6 @@ The idea is to create a configurable simulation of a viral infection for the bro
 
 ## Communication
 
-# Slack
+### Slack
+
+https://join.slack.com/t/virusim/shared_invite/zt-dsg4ejq8-wIKBPWrhrTRedxyd2Fpk1A
