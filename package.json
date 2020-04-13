@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
+    "start": "NODE_ENV=production node index.js",
     "start:dev": "webpack-dev-server",
     "test": "jest",
     "lint": "eslint src/**/*.ts"
@@ -31,6 +32,8 @@
   "dependencies": {
     "@babylonjs/core": "^4.1.0",
     "@babylonjs/gui": "^4.1.0",
+    "connect": "^3.7.0",
+    "connect-gzip-static": "^2.1.1",
     "lodash": "^4.17.15"
   }
 }
