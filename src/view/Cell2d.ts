@@ -1,3 +1,4 @@
+import { Scene } from '@babylonjs/core'
 import { AdvancedDynamicTexture, TextBlock } from '@babylonjs/gui'
 import { Vector3 } from '@babylonjs/core/Maths/math'
 import { MeshBuilder } from '@babylonjs/core/Meshes'
@@ -5,7 +6,7 @@ import { LinesMesh } from '@babylonjs/core/Meshes/linesMesh'
 
 import { Cell } from '../models'
 
-export function createCellMesh(cell: Cell, scene): LinesMesh {
+export function createCellMesh(cell: Cell, scene: Scene): LinesMesh {
     const tes = 60
     const pi2 = Math.PI * 2
     const step = pi2 / tes
