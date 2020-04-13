@@ -38,7 +38,7 @@ const startTranslation = function() {
 
 const virusCellMembraneFusion = function() {
     console.log('Starting virus cell membrane fusion...')
-    addMovement(virusGenes2d, scene, -9, -15, () => {
+    addMovement(virusGenes2d, scene, { initialValue: -9, finalValue: -15 }, () => {
         startTranslation()
     })
 }
@@ -51,8 +51,14 @@ const collisionDetection = function() {
 }
 scene.registerBeforeRender(collisionDetection)
 
-addMovement(virus2d, scene, 1, -9)
-addMovement(virusGenes2d, scene, 1, -9)
+addMovement(virus2d, scene, {
+    initialValue: 1,
+    finalValue: -9,
+})
+addMovement(virusGenes2d, scene, {
+    initialValue: 1,
+    finalValue: -9,
+})
 
 engine.runRenderLoop(function() {
     scene.render()

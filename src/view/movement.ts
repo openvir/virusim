@@ -1,7 +1,12 @@
 import { LinesMesh, Scene } from '@babylonjs/core'
 import { Animation } from '@babylonjs/core/Animations'
 
-export function addMovement(virus2d: LinesMesh, scene: Scene, initialValue: number, finalValue: number, onMovementFinished?: () => void) {
+type Params = {
+    initialValue: number,
+    finalValue: number
+}
+
+export function addMovement(virus2d: LinesMesh, scene: Scene, params: Params, onMovementFinished?: () => void) {
     const animation = new Animation(
         'tutoAnimation',
         'position.x',
@@ -11,8 +16,8 @@ export function addMovement(virus2d: LinesMesh, scene: Scene, initialValue: numb
     )
 
     const keys = []
-    keys.push({ frame: 0, value: initialValue })
-    keys.push({ frame: 100, value: finalValue })
+    keys.push({ frame: 0, value: params.initialValue })
+    keys.push({ frame: 100, value: params.finalValue })
 
     animation.setKeys(keys)
 
