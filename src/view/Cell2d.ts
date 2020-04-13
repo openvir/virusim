@@ -6,19 +6,24 @@ import { LinesMesh } from '@babylonjs/core/Meshes/linesMesh'
 
 import { Cell } from '../models'
 
-export function createCellMesh(cell: Cell, scene: Scene): LinesMesh {
+function createCellMembranePoints(cell: Cell) {
     const tes = 60
     const pi2 = Math.PI * 2
     const step = pi2 / tes
-    const path = []
+    const points = []
     for (let i = 0; i < pi2; i += step) {
         const x = cell.x + cell.radius * Math.sin(i)
         const z = 0
         const y = cell.y + cell.radius * Math.cos(i)
-        path.push(new Vector3(x, y, z))
+        points.push(new Vector3(x, y, z))
     }
-    path.push(path[0])
-    const mesh = MeshBuilder.CreateLineSystem('circle', { lines: [path] }, scene)
+    points.push(points[0])
+    return points
+}
+
+export function createCellMesh(cell: Cell, scene: Scene): LinesMesh {
+    const cellMembranePoints = createCellMembranePoints(cell)
+    const mesh = MeshBuilder.CreateLineSystem('circle', { lines: [cellMembranePoints] }, scene)
 
     const advancedTexture = AdvancedDynamicTexture.CreateFullscreenUI('UI')
     const text1 = new TextBlock()
