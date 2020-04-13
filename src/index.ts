@@ -5,7 +5,7 @@ import { addMovement } from './view/movement'
 import { createScene } from './view/scene'
 import { Cell } from './models'
 import { Virus } from './models'
-import { createVirusGenes, createVirusMesh } from './view/Virus2d'
+import { createVirusGenesMesh, createVirusMesh } from './view/Virus2d'
 
 const canvas = document.getElementById('renderCanvas') as HTMLCanvasElement
 const engine = new Engine(canvas, true)
@@ -28,7 +28,7 @@ const virus = new Virus({
 const scene = createScene(engine, canvas)
 const cell2d = createCellMesh(cell1, scene)
 const virus2d = createVirusMesh(virus, scene)
-const virusGenes = createVirusGenes(virus, scene)
+const virusGenes2d = createVirusGenesMesh(virus, scene)
 
 const collisionDetection = function() {
     if (cell2d.intersectsMesh(virus2d, true)) {
@@ -39,7 +39,7 @@ const collisionDetection = function() {
 scene.registerBeforeRender(collisionDetection)
 
 addMovement(virus2d, scene)
-addMovement(virusGenes, scene)
+addMovement(virusGenes2d, scene)
 
 engine.runRenderLoop(function() {
     scene.render()

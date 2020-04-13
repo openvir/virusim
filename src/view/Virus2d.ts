@@ -41,7 +41,7 @@ function createEnvelope(virus: Virus) {
     return path
 }
 
-export function createVirusGenes(virus: Virus, scene: Scene): LinesMesh {
+export function createVirusGenesMesh(virus: Virus, scene: Scene): LinesMesh {
     const points = createGenes(virus)
 
     const mesh = MeshBuilder.CreateLines('circle', { points: points }, scene)
