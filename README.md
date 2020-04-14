@@ -18,6 +18,10 @@ yarn dev
 
 Then open [http://localhost:8000](http://localhost:8000) in your web browser.
 
+## production
+
+The `master` branch is automatically deployed to [https://www.virusim.org](https://www.virusim.org).
+
 ## project planning
 
 ### milestones
