@@ -29,9 +29,9 @@ const widgetHTML = `
 </html>
 `
 
-const HOST = 'https://virusim-production.herokuapp.com'
-
-const resultHtml = _.template(widgetHTML)({ HOST })
+const resultHtml = _.template(widgetHTML)({
+    HOST: process.env.HOST,
+})
 
 fs.writeFileSync('dist/index.html', resultHtml)
 // eslint-disable-next-line no-console

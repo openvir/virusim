@@ -9,7 +9,7 @@
     "build": "NODE_ENV=production webpack --mode production && yarn build:server",
     "start": "NODE_ENV=production node packages/server/index.js",
     "dev": "npm-run-all --parallel dev:**",
-    "dev:server": "yarn build:server && node packages/server/index.js",
+    "dev:server": "HOST='http://localhost:9000' yarn build:server && node packages/server/index.js",
     "dev:snippet": "webpack-dev-server",
     "test": "jest",
     "lint": "eslint src/**/*.ts"
