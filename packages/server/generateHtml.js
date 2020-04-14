@@ -1,3 +1,7 @@
+const _ = require('lodash')
+const fs = require('fs')
+
+const widgetHTML = `
 <!doctype html>
 <html lang="en">
 <head>
@@ -23,3 +27,12 @@
 <script src="https://virusim-production.herokuapp.com/main.js"></script>
 </body>
 </html>
+`
+
+const VERSION = _.random(0, 10000)
+const compiled = _.template(widgetHTML)
+const resultHTML = compiled({ VERSION })
+
+fs.writeFileSync('dist/index.html', resultHTML)
+// eslint-disable-next-line no-console
+console.log('index.html was created.')
