@@ -24,15 +24,15 @@ const widgetHTML = `
 </head>
 <body>
 <canvas id="renderCanvas" touch-action="none"></canvas>
-<script src="https://virusim-production.herokuapp.com/main.js"></script>
+<script src="<%= SERVER %>/main.js"></script>
 </body>
 </html>
 `
 
-const VERSION = _.random(0, 10000)
-const compiled = _.template(widgetHTML)
-const resultHTML = compiled({ VERSION })
+const SERVER = 'https://virusim-production.herokuapp.com'
 
-fs.writeFileSync('dist/index.html', resultHTML)
+const resultHtml = _.template(widgetHTML)({ SERVER })
+
+fs.writeFileSync('dist/index.html', resultHtml)
 // eslint-disable-next-line no-console
 console.log('index.html was created.')
