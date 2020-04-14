@@ -20,7 +20,7 @@ Then open [http://localhost:8000](http://localhost:8000) in your web browser.
 
 ## production
 
-The `master` branch is automatically deployed to [https://www.virusim.org](https://www.virusim.org).
+The `master` branch is automatically deployed to [https://www.virusim.org](https://www.virusim.org) after passing the continuous integration on CirlceCI at [https://circleci.com/gh/dgrusemann/virusim](https://circleci.com/gh/dgrusemann/virusim).
 
 ## project planning
 
