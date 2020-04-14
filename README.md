@@ -7,6 +7,17 @@
 
 The idea is to create a configurable simulation of a viral infection for the browser mainly for educational purposes.
 
+## development
+
+To start development and run the project locally, run
+
+```
+yarn install
+yarn dev
+```
+
+Then open [http://localhost:8000](http://localhost:8000) in your web browser.
+
 ## project planning
 
 ### milestones
