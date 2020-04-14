@@ -24,14 +24,14 @@ const widgetHTML = `
 </head>
 <body>
 <canvas id="renderCanvas" touch-action="none"></canvas>
-<script src="<%= SERVER %>/main.js"></script>
+<script src="<%= HOST %>/main.js"></script>
 </body>
 </html>
 `
 
-const SERVER = 'https://virusim-production.herokuapp.com'
+const HOST = 'https://virusim-production.herokuapp.com'
 
-const resultHtml = _.template(widgetHTML)({ SERVER })
+const resultHtml = _.template(widgetHTML)({ HOST })
 
 fs.writeFileSync('dist/index.html', resultHtml)
 // eslint-disable-next-line no-console
