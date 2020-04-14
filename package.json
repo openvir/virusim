@@ -5,10 +5,10 @@
   "author": "dgrusemann <dominik.grusemann@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "NODE_ENV=production webpack --mode production && cpx index.html dist",
-    "start": "NODE_ENV=production node index.js",
+    "build": "NODE_ENV=production webpack --mode production && cpx packages/server/index.html dist",
+    "start": "NODE_ENV=production node packages/server/index.js",
     "dev": "npm-run-all --parallel dev:**",
-    "dev:server": "node index.js",
+    "dev:server": "node packages/server/index.js",
     "dev:snippet": "webpack-dev-server",
     "test": "jest",
     "lint": "eslint src/**/*.ts"

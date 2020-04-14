@@ -6,7 +6,7 @@
     "allowJs": true
   },
   "include": [
-    "src/**/*"
+    "packages/snippet/**/*"
   ],
   "exclude": [
     "node_modules"
