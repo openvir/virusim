@@ -7,6 +7,16 @@
 
 The idea is to create a configurable simulation of a viral infection for the browser mainly for educational purposes. This project should be open-source and non-profit.
 
+## looking for
+
+Currently we're looking for enthusiastic people who are willing to join this open-source and non-profit project. Concretely we're looking for:
+- JavaScript/TypeScript developers
+- Biologists/Immunologists/Virologists/MDs to guide the project and to input useful requirements and domain-specific knowledge
+
+## development process
+
+Feature Branches
+
 ## development
 
 To start development and run the project locally, run
