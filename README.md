@@ -5,7 +5,7 @@
 
 ## goal
 
-The idea is to create a configurable simulation of a viral infection for the browser mainly for educational purposes.
+The idea is to create a configurable simulation of a viral infection for the browser mainly for educational purposes. This project should be open-source and non-profit.
 
 ## development
 
