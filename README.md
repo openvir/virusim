@@ -7,6 +7,10 @@
 
 The idea is to create a configurable simulation of a viral infection. The software is intended to be used inside the browser mainly for educational purposes. This project is open-source and non-profit.
 
+## Why is this project useful?
+
+While the primary focus for this project will be educational purposes (for example using it in online courses about viruses, immunology and viral infections) there might be further applications possible.
+
 ## looking for
 
 Currently we're looking for enthusiastic people who are willing to join this open-source and non-profit project. Concretely we're looking for:
