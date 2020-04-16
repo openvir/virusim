@@ -11,7 +11,13 @@ The idea is to create a configurable simulation of a viral infection. The softwa
 
 While the primary focus for this project will be educational purposes (for example using it in online courses about viruses, immunology and viral infections) there might be further applications possible.
 
-## looking for
+## How do I get started?
+
+### Live version
+
+A live version of the software can be found at [https://www.virusim.org](https://www.virussim.org).
+
+### Who are you looking for?
 
 Currently we're looking for enthusiastic people who are willing to join this open-source and non-profit project. Concretely we're looking for:
 - JavaScript/TypeScript developers
