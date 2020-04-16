@@ -26,15 +26,19 @@ Then open [http://localhost:8000](http://localhost:8000) in your web browser.
 
 The `master` branch is automatically deployed to [https://www.virusim.org](https://www.virusim.org) after passing the continuous integration on CirlceCI at [https://circleci.com/gh/dgrusemann/virusim](https://circleci.com/gh/dgrusemann/virusim).
 
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
 ### Who are you looking for?
 
 Currently we're looking for enthusiastic people who are willing to join this open-source and non-profit project. Concretely we're looking for:
 - JavaScript/TypeScript developers
 - Biologists/Immunologists/Virologists/MDs to guide the project and to input useful requirements and domain-specific knowledge
 
-## development process
+## License
 
-Feature Branches
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## project planning
 
