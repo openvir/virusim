@@ -15,7 +15,7 @@ While the primary focus for this project will be educational purposes (for examp
 
 ### Live version
 
-A live version of the software can be found at [https://www.virusim.org](https://www.virussim.org).
+A live version of the software can be found at [https://www.virusim.org](https://www.virusim.org).
 
 ### Who are you looking for?
 
