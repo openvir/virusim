@@ -42,14 +42,6 @@ Currently we're looking for enthusiastic people who are willing to join this ope
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## project planning
-
-### milestones
-
-1. Infection of a cell
-2. Innate immune response
-3. Specific immune response
-
 ## Communication
 
 ### Slack
