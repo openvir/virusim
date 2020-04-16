@@ -1,11 +1,11 @@
 [![CircleCI](https://circleci.com/gh/dgrusemann/virusim.svg?style=svg)](https://circleci.com/gh/dgrusemann/virusim)
 [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
 
-# virusim
+# Virusim
 
-## goal
+## What does this project do?
 
-The idea is to create a configurable simulation of a viral infection for the browser mainly for educational purposes. This project should be open-source and non-profit.
+The idea is to create a configurable simulation of a viral infection. The software is intended to be used inside the browser mainly for educational purposes. This project is open-source and non-profit.
 
 ## looking for
 
