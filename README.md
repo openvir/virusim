@@ -11,17 +11,7 @@ Virusim is a configurable simulation of a viral infection. The software is inten
 
 A live version of the software can be found at [https://www.virusim.org](https://www.virusim.org).
 
-### Who are you looking for?
-
-Currently we're looking for enthusiastic people who are willing to join this open-source and non-profit project. Concretely we're looking for:
-- JavaScript/TypeScript developers
-- Biologists/Immunologists/Virologists/MDs to guide the project and to input useful requirements and domain-specific knowledge
-
-## development process
-
-Feature Branches
-
-## development
+### Running locally
 
 To start development and run the project locally, run
 
@@ -31,6 +21,16 @@ yarn dev
 ```
 
 Then open [http://localhost:8000](http://localhost:8000) in your web browser.
+
+### Who are you looking for?
+
+Currently we're looking for enthusiastic people who are willing to join this open-source and non-profit project. Concretely we're looking for:
+- JavaScript/TypeScript developers
+- Biologists/Immunologists/Virologists/MDs to guide the project and to input useful requirements and domain-specific knowledge
+
+## development process
+
+Feature Branches
 
 ## production
 
