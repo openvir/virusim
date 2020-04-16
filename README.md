@@ -3,7 +3,7 @@
 
 # Virusim
 
-Virusim is a configurable simulation of a viral infection. The software is intended to be used inside the browser mainly for educational purposes. This project is open-source and non-profit. While the primary focus for this project will be educational purposes (for example using it in online courses about viruses, immunology and viral infections) there might be further applications possible.
+Virusim is a configurable simulation of a viral infection. The software is intended to be used inside the browser mainly for educational purposes. This project is open-source and non-profit. While the primary focus for this project will be educational purposes (for example using it in online courses about viruses, immunology and viral infections) further applications might be possible in the future.
 
 ## Getting Started
 
