@@ -22,6 +22,10 @@ yarn dev
 
 Then open [http://localhost:8000](http://localhost:8000) in your web browser.
 
+## Deployment
+
+The `master` branch is automatically deployed to [https://www.virusim.org](https://www.virusim.org) after passing the continuous integration on CirlceCI at [https://circleci.com/gh/dgrusemann/virusim](https://circleci.com/gh/dgrusemann/virusim).
+
 ### Who are you looking for?
 
 Currently we're looking for enthusiastic people who are willing to join this open-source and non-profit project. Concretely we're looking for:
@@ -31,10 +35,6 @@ Currently we're looking for enthusiastic people who are willing to join this ope
 ## development process
 
 Feature Branches
-
-## production
-
-The `master` branch is automatically deployed to [https://www.virusim.org](https://www.virusim.org) after passing the continuous integration on CirlceCI at [https://circleci.com/gh/dgrusemann/virusim](https://circleci.com/gh/dgrusemann/virusim).
 
 ## project planning
 
