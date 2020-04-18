@@ -5,7 +5,7 @@ const widgetHTML = `
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Getting Started</title>
+    <title>Virusim</title>
     <style>
         html, body {
             overflow: hidden;
