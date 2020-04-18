@@ -1,7 +1,9 @@
 [![CircleCI](https://circleci.com/gh/openvir/virusim.svg?style=svg)](https://circleci.com/gh/openvir/virusim)
 [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
 
-# Virusim
+# ViruSim
+
+Fighting SARS-CoV-2 with education.
 
 ## Vision
 
