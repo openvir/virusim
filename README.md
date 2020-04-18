@@ -1,11 +1,13 @@
 [![CircleCI](https://circleci.com/gh/openvir/virusim.svg?style=svg)](https://circleci.com/gh/openvir/virusim)
 [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
 
-# Virusim
+# ViruSim
+
+Fighting SARS-CoV-2 with education.
 
 ## Vision
 
-Virusim will be a configurable simulation of a viral infection. The software is intended to be used inside the browser mainly for educational purposes. This project is open-source and non-profit. While the primary focus for this project will be educational purposes (for example using it in online courses about viruses, immunology and viral infections) further applications might be possible in the future.
+ViruSim will be a configurable simulation of a viral infection. The software is intended to be used inside the browser mainly for educational purposes. This project is open-source and non-profit. While the primary focus for this project will be educational purposes (for example using it in online courses about viruses, immunology and viral infections) further applications might be possible in the future.
 
 ## Getting started
 
