@@ -5,7 +5,8 @@
 
 Fighting SARS-CoV-2 with education.
 
-![alt text](https://github.com/openvir/virusim/blob/master/docs/logo/logo.png "Logo Title Text 1" =250x)
+![alt text]( "Logo Title Text 1" =250x)
+![](https://github.com/openvir/virusim/blob/master/docs/logo/logo.png =250x)
 
 ## Vision
 
