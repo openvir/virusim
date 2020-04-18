@@ -7,7 +7,7 @@
 
 Virusim will be a configurable simulation of a viral infection. The software is intended to be used inside the browser mainly for educational purposes. This project is open-source and non-profit. While the primary focus for this project will be educational purposes (for example using it in online courses about viruses, immunology and viral infections) further applications might be possible in the future.
 
-## Getting Started
+## Getting started
 
 ### Live version
 
@@ -23,6 +23,11 @@ yarn dev
 ```
 
 Then open [http://localhost:8000](http://localhost:8000) in your web browser.
+
+### Learning about viruses
+
+A very good starting point is the following online course:
+- https://courses.edx.org/courses/course-v1:IsraelX+Virus101x+2T2018/
 
 ## Deployment
 
