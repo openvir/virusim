@@ -5,6 +5,8 @@
 
 Fighting SARS-CoV-2 with education.
 
+![alt text](https://github.com/openvir/virusim/blob/master/docs/logo/logo.png "Logo Title Text 1")
+
 ## Vision
 
 ViruSim will be a configurable simulation of a viral infection. The software is intended to be used inside the browser mainly for educational purposes. This project is open-source and non-profit. While the primary focus for this project will be educational purposes (for example using it in online courses about viruses, immunology and viral infections) further applications might be possible in the future.
