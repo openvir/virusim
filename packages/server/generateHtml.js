@@ -50,7 +50,7 @@ const widgetHTML = `
 </head>
 <body>
 <div class="header">
-  <p>A browser simulation of a body cell getting infected by SARS-CoV-2.</p>
+  <p>ViruSim: A browser simulation of a body cell getting infected by SARS-CoV-2.</p>
 </div>
 <canvas id="renderCanvas" touch-action="none"></canvas>
 <script src="<%= HOST %>/main.js"></script>
