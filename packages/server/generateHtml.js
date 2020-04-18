@@ -14,6 +14,15 @@ const widgetHTML = `
             margin: 0;
             padding: 0;
         }
+        
+        .header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            text-align: center;
+        }
 
         #renderCanvas {
             width: 100%;
@@ -32,10 +41,13 @@ const widgetHTML = `
     </style>
 </head>
 <body>
+<div class="header">
+  <p>A browser simulation of a body cell getting infected by SARS-CoV-2.</p>
+</div>
 <canvas id="renderCanvas" touch-action="none"></canvas>
 <script src="<%= HOST %>/main.js"></script>
 <div class="footer">
-  <p>Find out more information at <a href="https://github.com/openvir/virusim" target="_blank">https://github.com/openvir/virusim</a>.</p>
+  <p>Find out more and contribute at <a href="https://github.com/openvir/virusim" target="_blank">https://github.com/openvir/virusim</a>.</p>
 </div>
 </body>
 </html>
