@@ -20,11 +20,23 @@ const widgetHTML = `
             height: 100%;
             touch-action: none;
         }
+        
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 <canvas id="renderCanvas" touch-action="none"></canvas>
 <script src="<%= HOST %>/main.js"></script>
+<div class="footer">
+  <p>Find out more information at <a href="https://github.com/openvir/virusim" target="_blank">https://github.com/openvir/virusim</a>.</p>
+</div>
 </body>
 </html>
 `
