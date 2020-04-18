@@ -40,10 +40,4 @@ Currently we're looking for enthusiastic people who are willing to join this ope
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Communication
-
-### Slack
-
-https://join.slack.com/t/virusim/shared_invite/zt-dsg4ejq8-wIKBPWrhrTRedxyd2Fpk1A
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
