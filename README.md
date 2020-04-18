@@ -30,7 +30,7 @@ The `master` branch is automatically deployed to [https://www.virusim.org](https
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ### Who are you looking for?
 
@@ -40,10 +40,4 @@ Currently we're looking for enthusiastic people who are willing to join this ope
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Communication
-
-### Slack
-
-https://join.slack.com/t/virusim/shared_invite/zt-dsg4ejq8-wIKBPWrhrTRedxyd2Fpk1A
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
