@@ -27,7 +27,7 @@ Then open [http://localhost:8000](http://localhost:8000) in your web browser.
 ### Learning about viruses
 
 A very good starting point is the following online course:
-- https://courses.edx.org/courses/course-v1:IsraelX+Virus101x+2T2018/
+- [https://courses.edx.org/courses/course-v1:IsraelX+Virus101x+2T2018/](Viruses & How to Beat Them: Cells, Immunity, Vaccines)
 
 ## Deployment
 
