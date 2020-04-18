@@ -33,6 +33,12 @@ A very good starting point is the following online course:
 
 The `master` branch is automatically deployed to [https://www.virusim.org](https://www.virusim.org) after passing the continuous integration on CirlceCI at [https://circleci.com/gh/dgrusemann/virusim](https://circleci.com/gh/dgrusemann/virusim).
 
+## Tech Stack
+
+- TypeScript
+- Webpack
+- [Babylon.js](https://www.babylonjs.com/)
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
@@ -40,7 +46,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 ### Who are you looking for?
 
 Currently we're looking for enthusiastic people who are willing to join this open-source and non-profit project. Concretely we're looking for:
-- JavaScript/TypeScript developers
+- JavaScript/TypeScript developers ideally with a background in 2D/3D rendering
 - Biologists/Immunologists/Virologists/MDs to guide the project and to input useful requirements and domain-specific knowledge
 
 ## License
