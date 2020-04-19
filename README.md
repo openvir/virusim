@@ -48,14 +48,16 @@ The `master` branch is automatically deployed to [https://www.virusim.org](https
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
 ### Who are you looking for?
 
 Currently we're looking for enthusiastic people who are willing to join this open-source and non-profit project. Concretely we're looking for:
 - JavaScript/TypeScript developers ideally with a background in 2D/3D rendering
 - Biologists/Immunologists/Virologists/MDs to guide the project and to input useful requirements and domain-specific knowledge ideally with an educational background
 - 2D/3D Designers
+
+### How do I contribute?
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## License
 
