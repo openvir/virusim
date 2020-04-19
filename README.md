@@ -35,7 +35,7 @@ A very good starting point is the following online course:
 
 ## Deployment
 
-The `master` branch is automatically deployed to [https://www.virusim.org](https://www.virusim.org) after passing the continuous integration on CirlceCI at [https://circleci.com/gh/dgrusemann/virusim](https://circleci.com/gh/dgrusemann/virusim).
+The `master` branch is automatically deployed to [https://www.virusim.org](https://www.virusim.org) after passing the continuous integration on CirlceCI at [https://circleci.com/gh/dominik1001/virusim](https://circleci.com/gh/dominik1001/virusim).
 
 ## Tech Stack
 
