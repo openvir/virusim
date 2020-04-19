@@ -59,7 +59,7 @@ const widgetHTML = `
 <canvas id="renderCanvas" touch-action="none"></canvas>
 <script src="<%= HOST %>/main.js"></script>
 <div class="footer">
-  <p>Find out more and contribute at <a href="https://github.com/openvir/virusim" target="_blank">https://github.com/openvir/virusim</a>.</p>
+  <p>👋👋👋 We're looking for contributors. Find out more at <a href="https://github.com/openvir/virusim" target="_blank">https://github.com/openvir/virusim</a>.</p>
 </div>
 </body>
 </html>
