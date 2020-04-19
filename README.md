@@ -7,6 +7,10 @@
 
 Fighting SARS-CoV-2 with education.
 
+---
+We're actively looking for contributurs. Please have a look at the [Contributing section](#Contributing).
+---
+
 ## Vision
 
 ViruSim will be a configurable simulation of a viral infection on a cellular level. The software is intended to be used inside the browser mainly for educational purposes (for example using it in online courses about viruses, immunology and viral infections). Therefore nice visuals will be a main part of this project. This project is open-source and non-profit. While the primary focus for this project will most probably be educational purposes further (scientific) applications might be possible in the future.
