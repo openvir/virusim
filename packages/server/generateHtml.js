@@ -5,6 +5,10 @@ const widgetHTML = `
 <!doctype html>
 <html lang="en">
 <head>
+    <meta property="og:url" content="https://www.virusim.org/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ViruSim: Fighting SARS-CoV-2 with education." />
+    <meta property="og:image" content="https://github.com/openvir/virusim/blob/master/docs/logo/logo.png" />
     <title>ViruSim</title>
     <style>
         html, body {
