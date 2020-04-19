@@ -7,7 +7,6 @@
 
 Fighting SARS-CoV-2 with education.
 
----
 We're actively looking for contributurs. Please have a look at the [Contributing section](#Contributing).
 ---
 
